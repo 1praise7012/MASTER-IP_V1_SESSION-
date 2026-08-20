@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MASTER-IP Session</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <main class="shell">
+    <section class="panel">
+      <div class="brand">
+        <img src="/bot.svg" alt="MASTER-IP bot" class="bot-image">
+        <div>
+          <p class="eyebrow">Secure Pairing Portal</p>
+          <h1>MASTER-IP SESSION</h1>
+        </div>
+      </div>
+
+      <div class="status-row">
+        <span class="pulse"></span>
+        <span id="serverStatus">Checking server...</span>
+      </div>
+
+      <form id="pairForm" class="pair-form">
+        <label for="phone">WhatsApp number</label>
+        <div class="input-row">
+          <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="26378xxxxxxx" required>
+          <button id="generateBtn" type="submit">Generate</button>
+        </div>
+      </form>
+
+      <section class="result-grid">
+        <div class="result-box">
+          <span>Pairing Code</span>
+          <strong id="pairCode">Waiting</strong>
+        </div>
+        <div class="result-box">
+          <span>Connection</span>
+          <strong id="pairStatus">Idle</strong>
+        </div>
+      </section>
+
+      <section class="session-card">
+        <div class="session-head">
+          <span>Session ID</span>
+          <button id="copyBtn" type="button" disabled>Copy</button>
+        </div>
+        <textarea id="sessionId" readonly placeholder="Your Session ID appears here after you pair the code in WhatsApp."></textarea>
+      </section>
+    </section>
+
+    <aside class="side">
+      <div class="scanner">
+        <span></span>
+      </div>
+      <h2>Pair. Paste. Run.</h2>
+      <p>Enter your number, pair the generated code in WhatsApp, then paste the Session ID into the MASTER-IP bot.</p>
+      <div class="steps">
+        <span>01 Number</span>
+        <span>02 Pair Code</span>
+        <span>03 Session ID</span>
+      </div>
+    </aside>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
